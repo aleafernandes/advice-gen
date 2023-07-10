@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap');
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+
+
+:root{
+    --prim-light-cyan:hsl(193, 38%, 86%);
+    --prim-neon-green:hsl(150, 100%, 66%);
+    
+    --ntrl-grayish-blue:hsl(217, 19%, 38%);
+    --ntrl-dark-g-blue: hsl(217, 19%, 24%);
+    --ntrl-dark-blue:hsl(218, 23%, 16%);
+}
+
+
+
+body{
+    font-family: 'Manrope', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--ntrl-dark-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+  width: 580px;
+  height: 340px;
+  background-color: var(--ntrl-dark-g-blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 15px;
+  margin: 35px;
+  position: relative;
+}
+.advice-header{
+
+  position: relative;
+  font-size: 15px;
+  color: var(--prim-neon-green);
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+.advice-text{
+  position: relative;
+  width: 480px;
+  color: var(--prim-light-cyan);
+  text-align: center;
+}
+.desk-hidden{
+  display: block;
+  margin-bottom: 5px;
+}
+
+.mob-hidden{
+  display: none;
+  margin-bottom: 5px;
+}
+button{
+    background-color: var(--prim-neon-green);
+    background-size: cover;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    display: grid;
+    place-items: center;
+    bottom: -10%;
+    position: absolute;
+    margin-top: 15px;
+}
+
+button:active{
+  box-shadow: 0 0px 15px var(--prim-neon-green);
+}
+
+.attribution { font-size: 11px; text-align: center; color: var(--prim-light-cyan); transform: translateY(30px); }
+.attribution a { color: var(--prim-neon-green)}
+
+@media (width < 376px){
+
+    body{
+    font-size: 15px;
+    display: block;
+    }
+    .container{
+    width: 300px;
+    height: 240px;
+    }
+    .advice-text{
+    width: 280px;
+    color: var(--prim-light-cyan);
+    text-align: center;
+    }
+    
+    button{
+    width: 50px;
+    height: 50px;
+    }
+
+    .desk-hidden{
+      display: none;
+    }
+
+    .mob-hidden{
+      display: block;
+    }
+
+    
+    .attribution { display: flex; margin: 25px; font-size: 10px; text-align: center; color: var(--prim-light-cyan); transform: translateY(30px); }
+    .attribution a { color: var(--prim-neon-green)}
+    }
